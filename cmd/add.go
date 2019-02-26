@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
     "strings"
-    "godoist/db"
+    "godo/db"
 
 	"github.com/spf13/cobra"
 )
