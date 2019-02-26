@@ -15,9 +15,11 @@
 package cmd
 
 import (
-	"fmt"
+    "log"
 
 	"github.com/spf13/cobra"
+    ui "github.com/gizak/termui"
+    widgets "github.com/gizak/termui/widgets"
 )
 
 // uiCmd represents the ui command
@@ -31,7 +33,25 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("ui called")
+        // Ensure the UI can be initialized
+        if err := ui.Init(); err != nil {
+            log.Fatalf("Failed to intialize termui: %v", err);
+        }
+
+        defer ui.Close();
+       
+        // Initialize a new paragraph
+        p := widgets.NewParagraph()
+        p.Text = "Hello world!"
+	    p.SetRect(0, 0, 25, 5)
+	    ui.Render(p)
+
+        for e := range ui.PollEvents() {
+            if e.Type == ui.KeyboardEvent {
+                break
+            }
+        }
+	    
 	},
 }
 
