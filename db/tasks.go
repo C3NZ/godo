@@ -49,7 +49,7 @@ func CreateTask(task string) (int, error) {
         // Get the next incremental id
         id64, _ := bucket.NextSequence()
         // Store our id outside of the closure
-        id = int(id64) 
+        id = int(bucket.Stats().KeyN + 1) 
         // convert the id into a byte slice to use as a bolt db key
         key := itob(id64)
         // Store both the key and task into our db
