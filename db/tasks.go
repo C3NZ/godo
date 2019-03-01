@@ -46,7 +46,7 @@ func CreateTask(task string) (int, error) {
     err := db.Update(func(tx *bolt.Tx) error {
         // Grab the task bucket
         bucket := tx.Bucket(taskBucket)
-        // Get the next incremental id
+        // Get the next sequence
         id64, _ := bucket.NextSequence()
         // Store our id outside of the closure
         id = int(bucket.Stats().KeyN + 1) 
