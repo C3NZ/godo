@@ -1,20 +1,23 @@
 # Godo
 
 ## Description
-A CLI UI based terminal for keeping track of your todos
+A task manager and todo list integrated into your command line.
 
 ## Getting started 
-Will post when the project has been developed
+just install and run godo :)
 
 ## Goals and Visions
-* Create a task manager that operates within the CLI
-* Utilize `termui` to create a UI within the terminal
-* Connect to an API of some sorts to help with productivity 
+* To learn more about termui
+* get better at making command line tools with golang
 
 ## How to run
-Will post when the project has been developed
+Will come when more features are fully flushed out
 
 ## How to use
-Will post when the project has been developed
+* `godo *` - General usage and help
+* `godo add some task`  - Adds a task to the todo list
+* `godo list` - list all of the todo list items 
+* `godo do [ID]` - complete a task where ID is the number of the task
+* `godo ui` - start the UI application
 
 ## Resources

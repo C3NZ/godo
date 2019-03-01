@@ -117,3 +117,8 @@ Temporary Items
 .apdisk
 
 # End of https://www.gitignore.io/api/macos,golang,go,linux
+gitignore.io help:
+  list    - lists the operating systems, programming languages and IDE input types
+  :types: - creates .gitignore files for types of operating systems, programming languages or IDEsgitignore.io help:
+  list    - lists the operating systems, programming languages and IDE input types
+  :types: - creates .gitignore files for types of operating systems, programming languages or IDEs
