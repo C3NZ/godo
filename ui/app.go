@@ -2,9 +2,6 @@ package ui
 
 import (
     "log"
-   
-    gui "github.com/C3NZ/godo/ui"
-
     tui "github.com/gizak/termui"
 )
 
@@ -14,8 +11,8 @@ func BuildApp() {
     if err := tui.Init(); err != nil {
         log.Fatalf("The UI could not be initialized due to: ", err) 
     }
-    paragraph := ui.CreateHeader()
-    defer tui.close()
+    paragraph := CreateHeader()
+    defer tui.Close()
     tui.Render(paragraph) 
 
 }

@@ -1,11 +1,6 @@
 module github.com/C3NZ/godo
 
 require (
-	github.com/C3NZ/godo/cmd v0.0.0
-	github.com/C3NZ/godo/ui v0.0.0
-)
-
-require (
 	github.com/boltdb/bolt v1.3.1
 	github.com/cjbassi/drawille-go v0.1.0 // indirect
 	github.com/gizak/termui v0.0.0-20190301220459-a9772ca75330
