@@ -5,13 +5,14 @@ import (
     "fmt"
     "os"
     "path/filepath"
-    "godo/cmd"
-    "godo/db"
+    "github.com/C3NZ/godo/cmd"
+    "github.com/C3NZ/godo/db"
 
     homedir "github.com/mitchellh/go-homedir"
 )
 
 func main() {
+    
     // Obtain the homedir path for the user currently running this program
     home, _ := homedir.Dir()
     

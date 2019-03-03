@@ -17,7 +17,7 @@ package cmd
 import (
     "os"
 	"fmt"
-    "godo/db"
+    "github.com/C3NZ/godo/db"
 
 	"github.com/spf13/cobra"
 )

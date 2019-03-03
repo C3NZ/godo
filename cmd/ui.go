@@ -17,9 +17,10 @@ package cmd
 import (
     "log"
 
+    "github.com/C3NZ/godo/ui"
+
 	"github.com/spf13/cobra"
-    ui "github.com/gizak/termui"
-    widgets "github.com/gizak/termui/widgets"
+    tui "github.com/gizak/termui"
 )
 
 // uiCmd represents the ui command
@@ -38,13 +39,12 @@ to quickly create a Cobra application.`,
             log.Fatalf("Failed to intialize termui: %v", err);
         }
 
+        
         defer ui.Close();
        
         // Initialize a new paragraph
-        p := widgets.NewParagraph()
-        p.Text = "Hello world!"
-	    p.SetRect(0, 0, 25, 5)
-	    ui.Render(p)
+        p := ui.CreateHeader() 
+	    tui.Render(p)
 
         for e := range ui.PollEvents() {
             if e.Type == ui.KeyboardEvent {
