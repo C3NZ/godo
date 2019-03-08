@@ -1,5 +1,7 @@
 # Godo
 
+![Go report card](https://goreportcard.com/badge/github.com/C3NZ/godo)
+![Go repo size](https://img.shields.io/github/repo-size/C3NZ/godo.png)
 ## Description
 A task manager and todo list integrated into your command line as both text and UI.
 
