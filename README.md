@@ -44,6 +44,8 @@ google developer console to get the token file.
 * `godo ui` - start the UI application which now visualizes the todo list right within your terminal!
 
 ## Resources
-[clui](https://github.com/VladimirMarkelov/clui)
-[bolt](https://github.com/boltdb/bolt)
-[cobra](https://github.com/spf13/cobra)
+[clui](https://github.com/VladimirMarkelov/clui) - Terminal ui
+
+[bolt](https://github.com/boltdb/bolt) - Minimal Key value store
+
+[cobra](https://github.com/spf13/cobra) - CLI commander
