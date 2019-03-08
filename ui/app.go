@@ -2,15 +2,21 @@ package ui
 
 import (
     "log"
+    
+    "github.com/luisvinicius167/godux" 
     tui "github.com/gizak/termui"
 )
 
-// Build the UI application and initaliaze all UI components
+// Store is the ui application state store for 
+var Store *godux.Store = godux.NewStore()
+
+// BuildApp builds the UI application and initaliaze all UI components
 func BuildApp() {
     // Initialize the ui
     if err := tui.Init(); err != nil {
-        log.Fatalf("The UI could not be initialized due to: ", err) 
+        log.Fatalln("The UI could not be initialized due to: ", err) 
     }
+    
     paragraph := CreateHeader()
     defer tui.Close()
     tui.Render(paragraph) 
