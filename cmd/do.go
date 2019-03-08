@@ -16,9 +16,9 @@ package cmd
 
 import (
 	"fmt"
-    "strconv"
-    "github.com/C3NZ/godo/db"
+	"github.com/C3NZ/godo/db"
 	"github.com/spf13/cobra"
+	"strconv"
 )
 
 // doCmd represents the do command
@@ -26,20 +26,19 @@ var doCmd = &cobra.Command{
 	Use:   "do",
 	Short: "A brief description of your command",
 	Run: func(cmd *cobra.Command, args []string) {
-        for _, arg := range args {
-            // Attempt to convert the argument from a str to an integer
-            id, err := strconv.Atoi(arg)
-          
+		for _, arg := range args {
+			// Attempt to convert the argument from a str to an integer
+			id, err := strconv.Atoi(arg)
 
-            // If there is an error, inform the user.
-            // Append to the list of ids otherwise
-            if err != nil {
-                fmt.Println("Failed to parse the argument:", arg)
-            } else {
-                fmt.Println("You've completed task:", id)
-                db.DeleteTask(id)
-            }
-        }
+			// If there is an error, inform the user.
+			// Append to the list of ids otherwise
+			if err != nil {
+				fmt.Println("Failed to parse the argument:", arg)
+			} else {
+				fmt.Println("You've completed task:", id)
+				db.DeleteTask(id)
+			}
+		}
 	},
 }
 

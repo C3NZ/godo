@@ -8,6 +8,6 @@ import "github.com/spf13/cobra"
 // Long - A long description of your command
 // Run - What is used to run your command(?)
 var RootCmd = &cobra.Command{
-    Use:   "godo",
-    Short: "godo is a CLI task manager with a built in UI",
+	Use:   "godo",
+	Short: "godo is a CLI task manager with a built in UI",
 }

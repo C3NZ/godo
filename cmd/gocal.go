@@ -15,9 +15,9 @@
 package cmd
 
 import (
-    "github.com/spf13/cobra" 
 	gocal "github.com/Connor-Cahill/GoCal/cmd"
-    calevents "github.com/connor-cahill/goCal/services"
+	calevents "github.com/connor-cahill/goCal/services"
+	"github.com/spf13/cobra"
 )
 
 // showCmd represents the show command
@@ -26,13 +26,13 @@ var gocalCmd = &cobra.Command{
 	Short: "utilize the gocal integration",
 	Run: func(cmd *cobra.Command, args []string) {
 
-	    calevents.MakeIDMap()
+		calevents.MakeIDMap()
 
-	    calevents.UpdateMap()
-	    gocal.RootCmd.Execute()
+		calevents.UpdateMap()
+		gocal.RootCmd.Execute()
 	},
 }
 
 func init() {
-    RootCmd.AddCommand(gocalCmd)
+	RootCmd.AddCommand(gocalCmd)
 }
