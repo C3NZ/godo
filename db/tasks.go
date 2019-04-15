@@ -9,7 +9,6 @@ import (
 
 // Define our bucket
 var taskBucket = []byte("tasks")
-
 // Define our db
 var db *bolt.DB
 
