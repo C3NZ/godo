@@ -2,8 +2,6 @@ package db
 
 import (
 	"encoding/binary"
-	"time"
-
 	"github.com/boltdb/bolt"
 )
 
@@ -22,7 +20,10 @@ type Task struct {
 // Init function for initializing our database and any buckets we'd like to be stored within it
 func Init(dbPath string) error {
 
-	db, err := bolt.Open(dbPath, 0600, &bolt.Options{Timeout: 1 * time.Second})
+	// WTF Golang? the global db wouldn't initialize when used within the walrus
+	// operator, so I must explicitly assign the local to the global.
+	_db, err := bolt.Open(dbPath, 0600, nil)
+	db = _db
 
 	if err != nil {
 		return err
@@ -36,6 +37,10 @@ func Init(dbPath string) error {
 		_, err := tx.CreateBucketIfNotExists(taskBucket)
 		return err
 	})
+}
+
+func Close() {
+	db.Close()
 }
 
 // Create a task

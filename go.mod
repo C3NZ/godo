@@ -1,5 +1,7 @@
 module github.com/C3NZ/godo
 
+go 1.15
+
 require (
 	github.com/Connor-Cahill/GoCal v0.0.0-20190307204003-486754b877de
 	github.com/VladimirMarkelov/clui v0.8.0
@@ -9,6 +11,7 @@ require (
 	github.com/connor-cahill/goCal v0.0.0-20190307204003-486754b877de
 	github.com/gizak/termui v0.0.0-20190301220459-a9772ca75330
 	github.com/huandu/xstrings v1.2.0 // indirect
+	github.com/inconshreveable/mousetrap v1.0.0 // indirect
 	github.com/luisvinicius167/godux v0.0.0-20171226002539-ae24f203856a
 	github.com/maruel/panicparse v1.1.1 // indirect
 	github.com/mattn/go-runewidth v0.0.4 // indirect
